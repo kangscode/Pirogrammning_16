@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=divice-width" />
+    <title>My Movie reviews</title>
+  </head>
+  <body>
+    <h3><a href="{% url 'reviews:create'%}">Add a New release</a></h3>
+
+    {%for review in reviews%}
+    <h2><a href="{% url 'reviews:detail' review.id %}">{{ review.title }}</a></h2>
+    <br />
+    <p>개봉년도 {{review.year}}년</p>
+    <p>장르 {{review.genre}}</p>
+    <p>별점 {{review.rating}}</p>
+    {%endfor%}
+  </body>
+</html>

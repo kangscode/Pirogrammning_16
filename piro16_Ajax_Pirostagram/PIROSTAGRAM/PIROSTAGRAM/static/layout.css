@@ -1,0 +1,46 @@
+header {
+    /* position: sticky;
+    top: 0; */
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgb(255, 217, 184);
+    border-radius: 10px;
+}
+
+.header__container {
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.post__container img {
+    width: 200px;
+    height: 150px;
+}
+
+.post__container .card-title {
+    width: 200px;
+}
+
+.post__container .card-text {
+    width: 200px;
+    height: 50px;
+    overflow-y: auto;
+}
+
+.main__container {
+    flex-wrap : wrap;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+    flex-direction: row;
+}
+
+.post__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}

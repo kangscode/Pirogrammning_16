@@ -1,0 +1,38 @@
+#gallery img {
+    width: 275px; 
+    height: 183px;
+}
+
+
+#aboutModal span{
+    text-align: center;
+}
+
+a {
+    text-decoration: none
+}
+
+.modal-header {
+    flex-direction: column;
+}
+
+.ct {
+    justify-content: center;
+}
+
+#w-70 {
+    width :70%
+}
+
+#w-large {
+    width: 600px;
+}
+
+.navbar-brand:hover {
+    text-decoration: underline;
+}
+
+#center {
+    text-align: center;
+}
+

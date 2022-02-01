@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포스트 작성</title>
+  </head>
+
+  <body>
+    <form action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div>
+        <label for="title">>> 아이디어명</label><br />
+        <input type="text" name="title" id="title" value="{% if idea.title %}{{idea.title}}{% endif %}"/>
+      </div>
+      <div>
+        <label>>> 대표 사진 </label> <br />
+        <input name="poster" type="file" maxlength="255" value="{% if idea.image %}{{idea.image.url}}{% endif %}">
+      </div>
+      <div>
+        <label for="content">>> 아이디어 설명</label><br />
+        <textarea name="content" id="content" cols="30" rows="10">{% if idea.content %}{{idea.content}}{% endif %}</textarea>
+      </div>
+      <div>
+        <label for="interest">>> 아이디어 관심도</label><br />
+        <input type="text" name="interest" id="interest" value="{% if idea.interest %}{{idea.interest}}{% endif %}"/>
+      </div>
+      <div>
+        <label>>> 예상 개발툴</label><br />
+        <span>{{form.devtool}}</span>
+      </div>
+      
+      <input type="submit" value="SUBMIT" />
+    </form>
+  </body>
+</html>

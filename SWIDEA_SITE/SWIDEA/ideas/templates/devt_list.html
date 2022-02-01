@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=divice-width" />
+    <title>글 리스트</title>
+  </head>
+  <body>
+    <h2><a href="{% url 'ideas:idea_create'%}">아이디어 등록</a></h2>
+    <h2><a href="{% url 'ideas:idea_list'%}">아이디어 관리</a></h2>
+    <h2><a href="{% url 'ideas:devt_create'%}">개발툴 등록</a></h2>
+    <h2><a href="{% url 'ideas:devt_list'%}">개발툴 관리</a></h2>
+
+    {%for devt in devts%}
+    <h2><a href="{% url 'ideas:devt_detail' devt.id%}">{{devt.name}}</a></h2>
+    <h4>{{devt.kind}}</h4>
+    <h4>{{devt.description}}</h4>
+
+    {%endfor%}
+  </body>
+</html>

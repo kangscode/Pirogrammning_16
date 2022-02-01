@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+</head>
+<body>
+    <h1>피로그래밍 과제 리스트</h1>
+    <input type="text" id="subject" placeholder="과제를 입력하세요!" autofocus>   
+    <button onclick="newRegister(); return false;">추가</button> 
+    <hr>
+    <table id="info" border="1">
+        <tr>
+            <td><input type="checkbox" checked disabled></td>
+            <td>오늘 할 과제</td>
+        </tr>
+        
+    </table>
+    
+    <button onclick="btnDelete()">선택 과제 삭제</button>
+    <button onclick="delete_Row(-1)">마지막 과제 삭제</button>
+    <button onclick="deleteAll()">전체 삭제</button>
+
+    
+
+
+
+
+    
+    
+    <script src="./todolist.js"></script>
+</body>
+</html>

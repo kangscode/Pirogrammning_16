@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+
+#footer img {
+    width: 400px;
+    height: 100px;
+}
+
+#main main-ex {
+    display: inline-block;
+    width: 740px;
+    height: 120px;
+}
+
+#main-signup {
+    display: inline-block;
+    width: 350px;
+    height: auto;
+    vertical-align: top;
+    border-width: 10px 5px 5px 10px;
+    background-color: white;
+}
+
+#main-signup input {
+    width: 100%;
+}
+
+
+#main-signup button {
+    width: 540px;
+    height: 70px;
+    background-color: yellowgreen;
+}

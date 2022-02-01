@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포스트 작성</title>
+  </head>
+
+  <body>
+    <form action="" method="post">
+      {% csrf_token %}
+      <div>
+        <label for="name">>> 이름</label><br />
+        <input type="text" name="name" id="name" value="{% if devt.name %}{{devt.name}}{% endif %}"/>
+      </div>
+      <div>
+        <label for="kind">>> 종류</label><br />
+        <input type="text" name="kind" id="kind" value="{% if devt.kind %}{{devt.kind}}{% endif %}"/>
+      </div>
+      <div>
+        <label for="description">>> 개발툴 설명</label><br />
+        <textarea name="description" id="content" cols="30" rows="10">{% if devt.description %}{{devt.description}}{% endif %}</textarea>
+      </div>
+      <input type="submit" value="SUBMIT" />
+    </form>
+  </body>
+</html>

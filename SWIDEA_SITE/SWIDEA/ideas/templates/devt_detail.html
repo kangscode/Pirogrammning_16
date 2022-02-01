@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포스트 상세 정보</title>
+  </head>
+
+  <body>
+    <h2><a href="{% url 'ideas:idea_create'%}">아이디어 등록</a></h2>
+    <h2><a href="{% url 'ideas:idea_list'%}">아이디어 관리</a></h2>
+    <h2><a href="{% url 'ideas:devt_create'%}">개발툴 등록</a></h2>
+    <h2><a href="{% url 'ideas:devt_list'%}">개발툴 관리</a></h2>
+
+    <h1>{{ devt.name }}</h1>
+    <p>{{ devt.kind }}</p>
+    <p>{{ devt.description }}</p>
+
+    <p>얻을 수 있는 SW 목록</p>
+    {% for idea in ideas %}
+        <p><a href="{% url 'ideas:idea_detail' idea.id%}">{{idea.title}}</a></p>
+    {% endfor %}
+    
+
+    <a href="{% url 'ideas:devt_list' %}">목록</a>
+    <a href="{% url 'ideas:devt_update' devt.id %}">수정</a>
+    <a href="{% url 'ideas:devt_delete' devt.id %}">삭제</a>
+
+
+
+  </body>
+</html>

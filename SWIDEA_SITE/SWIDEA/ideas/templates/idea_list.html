@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=divice-width" />
+    <title>글 리스트</title>
+  </head>
+  <body>
+    
+    <h2><a href="{% url 'ideas:idea_create'%}">아이디어 등록</a></h2>
+    <h2><a href="{% url 'ideas:idea_list'%}">아이디어 관리</a></h2>
+    <h2><a href="{% url 'ideas:devt_create'%}">개발툴 등록</a></h2>
+    <h2><a href="{% url 'ideas:devt_list'%}">개발툴 관리</a></h2>
+
+    {%for idea in ideas%}
+    <div class=list-poster>
+        {% if idea.image %}
+            <img src="{{idea.image.url}}" height="220" width="160">
+        {% else %}
+          z
+        {% endif %}
+    </div>
+    <h2><a href="{% url 'ideas:idea_detail' idea.id%}">{{idea.title}}</a></h2>
+    <h4>예상 개발 툴 : {{idea.devtool}}</h4>
+    <h4>아이디어 관심도 : {{idea.interest}}</h4>
+    <br />
+
+    {%endfor%}
+  </body>
+</html>
